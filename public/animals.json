@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Dog",
+    "type": "Domestic"
+  },
+  {
+    "name": "Cat",
+    "type": "Domestic"
+  },
+  {
+    "name": "Tiger",
+    "type": "Wild"
+  },
+  {
+    "name": "Lion",
+    "type": "Wild"
+  },
+  {
+    "name": "Elephant",
+    "type": "Wild"
+  },
+  {
+    "name": "Chicken",
+    "type": "Domestic"
+  },
+  {
+    "name": "Sheep",
+    "type": "Domestic"
+  },
+  {
+    "name": "Honeybadger",
+    "type": "Wild"
+  },
+  {
+    "name": "Snake",
+    "type": "Wild"
+  },
+  {
+    "name": "Cow",
+    "type": "Domestic"
+  }
+]
