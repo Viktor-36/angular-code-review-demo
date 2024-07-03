@@ -8,8 +8,8 @@ import {AuthorizationService} from '../../../core/services/authorization.service
   providedIn: 'root'
 })
 export class AnimalsService {
-  private _animals: any[] = [];
-  private _animalsSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  private _animals: Animal[] = [];
+  private _animalsSubject: BehaviorSubject<Animal[]> = new BehaviorSubject<Animal[]>([]);
 
   constructor(
     private readonly authorizationService: AuthorizationService,
@@ -17,7 +17,7 @@ export class AnimalsService {
     this.loadAnimals().subscribe();
   }
 
-  get animals$(): Observable<any[]> {
+  get animals$(): Observable<Animal[]> {
     return this._animalsSubject.asObservable();
   }
 
@@ -32,13 +32,13 @@ export class AnimalsService {
     this._animalsSubject.next(this._animals);
   }
 
-  private loadAnimals(): Observable<any[]> {
-    return this.httpClient.get<any[]>('/animals.json', {
+  private loadAnimals(): Observable<Animal[]> {
+    return this.httpClient.get<Animal[]>('/animals.json', {
       headers: {
         'Authorization': `Bearer ${this.authorizationService.accessToken}`
       }
     }).pipe(
-      map((animals: any[]) => {
+      map((animals: Animal[]) => {
         this._animals = animals;
         this._animalsSubject.next(this._animals);
         return animals;
