@@ -4,7 +4,8 @@ import {AnimalsService} from '../../services/animals.service';
 import {Router} from '@angular/router';
 import {Animal} from '../../models/animal';
 import {AnimalForm} from '../../models/animal-form';
-import {NgClass, NgIf} from '@angular/common';
+import {KeyValuePipe, NgClass, NgForOf, NgIf} from '@angular/common';
+import {AnimalType} from '../../models/animal-type';
 
 @Component({
   selector: 'app-animals-form',
@@ -13,13 +14,16 @@ import {NgClass, NgIf} from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     NgClass,
-    NgIf
+    NgIf,
+    NgForOf,
+    KeyValuePipe
   ],
   templateUrl: './animals-form.component.html',
   styleUrl: './animals-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnimalsFormComponent {
+  animalTypes = AnimalType;
   formGroup: FormGroup<AnimalForm> = new FormGroup<AnimalForm>({
     name: new FormControl<string>(
       '',
@@ -27,8 +31,8 @@ export class AnimalsFormComponent {
         nonNullable: true,
         validators: [Validators.required]
       }),
-    type: new FormControl<string>(
-      '',
+    type: new FormControl<AnimalType>(
+      AnimalType.Domestic,
       {
         nonNullable: true,
         validators: [Validators.required]

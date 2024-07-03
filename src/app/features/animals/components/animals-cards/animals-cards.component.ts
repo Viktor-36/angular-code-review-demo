@@ -3,6 +3,7 @@ import {AsyncPipe, NgForOf, NgOptimizedImage} from '@angular/common';
 import {Observable} from 'rxjs';
 import {Animal} from '../../models/animal';
 import {AnimalsService} from '../../services/animals.service';
+import {AnimalType} from '../../models/animal-type';
 
 @Component({
   selector: 'app-animals-cards',
@@ -17,6 +18,8 @@ import {AnimalsService} from '../../services/animals.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnimalsCardsComponent {
+  animalTypes = AnimalType;
+
   constructor(private readonly animalsService: AnimalsService) {
   }
 

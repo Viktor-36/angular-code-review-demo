@@ -19,8 +19,7 @@
             class="form-select"
             [class.is-invalid]="type.invalid && (type.dirty || type.touched)"
             required>
-      <option value="Domestic">Domestic</option>
-      <option value="Wild">Wild</option>
+      <option *ngFor="let animalType of animalTypes | keyvalue" [value]="animalType.key">{{ animalType.value }}</option>
     </select>
     <div *ngIf="type.hasError('required')" class="invalid-feedback">
       Type is required.
