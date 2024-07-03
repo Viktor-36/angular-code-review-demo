@@ -7,7 +7,7 @@ import {tap} from 'rxjs';
   providedIn: 'root'
 })
 export class AnimalsService {
-  private _animals: Animal[] = [];
+  private _animals: any[] = [];
 
   constructor(private readonly httpClient: HttpClient) {
     this.httpClient.get<any[]>('/animals.json')

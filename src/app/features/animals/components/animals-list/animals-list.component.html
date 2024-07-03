@@ -28,9 +28,8 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let animal of animalsService.animals; let i = index" [class.table-danger]="animal.type === 'Wild'"
-          [class.table-success]="animal.type === 'Domestic'">
-        <th scope="row">{{ i }}</th>
+      <tr *ngFor="let animal of animalsService.animals; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
         <td>{{ animal.name }}</td>
         <td>{{ animal.type }}</td>
         <td class="text-end">
@@ -44,7 +43,8 @@
   <ng-container *ngIf="activeTab === 'cards'">
     <div class="row">
       <div *ngFor="let animal of animalsService.animals; let i = index" class="col-3 mb-4">
-        <div class="card" [class.border-danger]="animal.type === 'Wild'" [class.border-success]="animal.type === 'Domestic'">
+        <div class="card" [class.border-danger]="animal.type === 'Wild'"
+             [class.border-success]="animal.type === 'Domestic'">
           <img src="{{ animal.imageUrl }}" class="card-img-top" alt="animal" style="max-height: 200px;">
           <div class="card-body">
             <h5 class="card-title">{{ animal.name }}</h5>
