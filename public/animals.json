@@ -14,7 +14,6 @@
   {
     "name": "Tiger",
     "type": "Wild",
-    "imageUrl": "/placeholder.jpg",
     "description": "Catty ipsum. Sit on human they not getting up ever tuxedo cats always looking dapper for scoot butt on the rug but ptracy drool yowling nonstop the whole night have secret plans."
   },
   {
@@ -32,7 +31,7 @@
   {
     "name": "Chicken",
     "type": "Domestic",
-    "imageUrl": "/placeholder.jpg",
+    "imageUrl": null,
     "description": "Find empty spot in cupboard and sleep all day sniff catnip and act crazy if it fits, i sits and cough furball for scratch the postman wake up lick paw wake up owner meow meow or really likes hummus pee in the shoe."
   },
   {
