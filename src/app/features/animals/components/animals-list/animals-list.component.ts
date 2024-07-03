@@ -1,8 +1,8 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {AnimalsService} from '../../services/animals.service';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 import {Animal} from '../../models/animal';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-animals-list',
@@ -10,14 +10,22 @@ import {RouterLink, RouterOutlet} from '@angular/router';
   imports: [
     NgForOf,
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    RouterLinkActive,
+    NgIf
   ],
   templateUrl: './animals-list.component.html',
   styleUrl: './animals-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AnimalsListComponent {
+  activeTab: string = 'table';
+
   constructor(public readonly animalsService: AnimalsService) {
+  }
+
+  changeActiveTab(tab: string): void {
+    this.activeTab = tab;
   }
 
   removeAnimal(animal: Animal): void {

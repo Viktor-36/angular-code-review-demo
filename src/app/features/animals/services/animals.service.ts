@@ -16,7 +16,7 @@ export class AnimalsService {
       ).subscribe();
   }
 
-  get animals(): Animal[] {
+  get animals(): any[] {
     return this._animals;
   }
 
