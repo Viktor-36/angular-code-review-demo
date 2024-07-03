@@ -13,7 +13,6 @@ export const routes: Routes = [
     path: 'animals',
     component: AnimalsListComponent,
   },
-
   {
     path: 'animals/add',
     component: AnimalsFormComponent

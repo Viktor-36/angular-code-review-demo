@@ -1,19 +1,53 @@
 <h1>Add animal</h1>
-<form (ngSubmit)="submitForm()">
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
   <div class="mb-3">
-    <label class="form-label">Name</label>
-    <input type="text" name="name" class="form-control" [(ngModel)]="name">
+    <label for="name" class="form-label">Name</label>
+    <input id="name"
+           type="text"
+           formControlName="name"
+           class="form-control"
+           [class.is-invalid]="name.invalid && (name.dirty || name.touched)"
+           required>
+    <div *ngIf="name.hasError('required')" class="invalid-feedback">
+      Name is required.
+    </div>
   </div>
   <div class="mb-3">
-    <label class="form-label">Type</label>
-    <select name="type" class="form-select" [(ngModel)]="type">
+    <label for="type" class="form-label">Type</label>
+    <select id="type"
+            formControlName="type"
+            class="form-select"
+            [class.is-invalid]="type.invalid && (type.dirty || type.touched)"
+            required>
       <option value="Domestic">Domestic</option>
       <option value="Wild">Wild</option>
     </select>
+    <div *ngIf="type.hasError('required')" class="invalid-feedback">
+      Type is required.
+    </div>
   </div>
   <div class="mb-3">
-    <label class="form-label">Description</label>
-    <textarea name="description" class="form-control" [(ngModel)]="description"></textarea>
+    <label for="imageUrl" class="form-label">Image URL (optional)</label>
+    <input id="imageUrl"
+           type="url"
+           formControlName="imageUrl"
+           class="form-control"
+           [class.is-invalid]="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched)">
+    <div *ngIf="imageUrl.hasError('pattern')" class="invalid-feedback">
+      Invalid URL.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea id="description"
+              formControlName="description"
+              class="form-control"
+              [class.is-invalid]="description.invalid && (description.dirty || description.touched)"
+              required>
+    </textarea>
+    <div *ngIf="description.hasError('required')" class="invalid-feedback">
+      Description is required.
+    </div>
   </div>
   <div class="text-end">
     <button type="submit" class="btn btn-primary">Submit</button>
