@@ -1,42 +1,62 @@
 [
   {
     "name": "Dog",
-    "type": "Domestic"
+    "type": "Domestic",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Cat ipsum dolor sit amet, drool, chase dog then run away where is my slave? I'm getting hungry so pushed the mug off the table."
   },
   {
     "name": "Cat",
-    "type": "Domestic"
+    "type": "Domestic",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Meow to be let out damn that dog , stare at ceiling, so kitty kitty pussy cat doll."
   },
   {
     "name": "Tiger",
-    "type": "Wild"
+    "type": "Wild",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Catty ipsum. Sit on human they not getting up ever tuxedo cats always looking dapper for scoot butt on the rug but ptracy drool yowling nonstop the whole night have secret plans."
   },
   {
     "name": "Lion",
-    "type": "Wild"
+    "type": "Wild",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Floof tum, tickle bum, jellybean footies curly toes naughty running cat but meow, when in doubt, wash headbutt owner's knee."
   },
   {
     "name": "Elephant",
-    "type": "Wild"
+    "type": "Wild",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Stare at ceiling destroy dog catch mouse and gave it as a present and sit as close as possible to warm fire without sitting on cold floor and cats go for world domination trip on catnip hunt anything."
   },
   {
     "name": "Chicken",
-    "type": "Domestic"
+    "type": "Domestic",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Find empty spot in cupboard and sleep all day sniff catnip and act crazy if it fits, i sits and cough furball for scratch the postman wake up lick paw wake up owner meow meow or really likes hummus pee in the shoe."
   },
   {
     "name": "Sheep",
-    "type": "Domestic"
+    "type": "Domestic",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Sugar, my siamese, stalks me (in a good way), day and night relentlessly pursues moth."
   },
   {
     "name": "Honeybadger",
-    "type": "Wild"
+    "type": "Wild",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Lick plastic bags sleeping in the box or please stop looking at your phone and pet me, but pose purrfectly to show my beauty lick plastic bags for slap kitten brother with paw all of a sudden cat goes crazy."
   },
   {
     "name": "Snake",
-    "type": "Wild"
+    "type": "Wild",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Love you, then bite you meow or purr like an angel yet cat milk copy park pee walk owner escape bored tired cage droppings sick vet vomit so found somthing move i bite it tail."
   },
   {
     "name": "Cow",
-    "type": "Domestic"
+    "type": "Domestic",
+    "imageUrl": "/placeholder.jpg",
+    "description": "Mice hunt by meowing loudly at 5am next to human slave food dispenser grass smells good for immediately regret falling into bathtub, for roll over and sun my belly."
   }
 ]
