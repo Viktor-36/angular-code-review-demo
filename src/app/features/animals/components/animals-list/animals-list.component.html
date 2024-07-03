@@ -9,52 +9,13 @@
 
 <ul class="nav nav-tabs mb-4">
   <li class="nav-item">
-    <a class="nav-link" (click)="changeActiveTab('table')" [class.active]="activeTab === 'table'">Table</a>
+    <a class="nav-link" routerLink="/animals/table" routerLinkActive="active">Table</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" (click)="changeActiveTab('cards')" [class.active]="activeTab === 'cards'">Cards</a>
+    <a class="nav-link" routerLink="/animals/cards" routerLinkActive="active">Cards</a>
   </li>
 </ul>
 
 <div>
-  <ng-container *ngIf="activeTab === 'table'">
-    <table class="table table-striped align-middle">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Type</th>
-        <th scope="col" class="text-end">Actions</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let animal of animals$ | async; let i = index">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ animal.name }}</td>
-        <td>{{ animal.type }}</td>
-        <td class="text-end">
-          <button type="button" class="btn btn-danger btn-sm" (click)="removeAnimal(animal)">Remove</button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </ng-container>
-
-  <ng-container *ngIf="activeTab === 'cards'">
-    <div class="row">
-      <div *ngFor="let animal of animals$ | async; let i = index" class="col-3 mb-4">
-        <div class="card" [class.border-danger]="animal.type === 'Wild'"
-             [class.border-success]="animal.type === 'Domestic'">
-          <img src="{{ animal.imageUrl }}" class="card-img-top" alt="animal" style="max-height: 200px;">
-          <div class="card-body">
-            <h5 class="card-title">{{ animal.name }}</h5>
-            <p class="card-text">{{ animal.description }}</p>
-          </div>
-          <div class="card-footer text-body-secondary">
-            {{ animal.type }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </ng-container>
+  <router-outlet></router-outlet>
 </div>
