@@ -33,11 +33,7 @@ export class AnimalsService {
   }
 
   private loadAnimals(): Observable<Animal[]> {
-    return this.httpClient.get<Animal[]>('/animals.json', {
-      headers: {
-        'Authorization': `Bearer ${this.authorizationService.accessToken}`
-      }
-    }).pipe(
+    return this.httpClient.get<Animal[]>('/animals.json').pipe(
       map((animals: Animal[]) => {
         this._animals = animals;
         this._animalsSubject.next(this._animals);
