@@ -1,4 +1,21 @@
-<h1>Animals</h1>
+<div class="row">
+  <div class="col">
+    <h1>Animals</h1>
+  </div>
+  <div class="col text-end">
+    <button class="btn btn-success" routerLink="/animals/add">Add new</button>
+  </div>
+</div>
 
-<!-- TODO: Add table with animals -->
-<p>Coming soon...</p>
+<ul class="nav nav-tabs mb-4">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/animals/table" routerLinkActive="active">Table</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/animals/cards" routerLinkActive="active">Cards</a>
+  </li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

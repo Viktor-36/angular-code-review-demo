@@ -1,0 +1,16 @@
+<div class="row">
+  <div *ngFor="let animal of animals$ | async; let i = index" class="col-3 mb-4">
+    <div class="card h-100"
+         [class.border-danger]="animal.type === animalTypes.Wild"
+         [class.border-success]="animal.type === animalTypes.Domestic">
+      <img src="{{ animal.imageUrl ?? '/placeholder.jpg' }}" class="card-img-top" alt="animal" style="max-height: 200px;">
+      <div class="card-body">
+        <h5 class="card-title">{{ animal.name }}</h5>
+        <p class="card-text">{{ animal.description }}</p>
+      </div>
+      <div class="card-footer text-body-secondary">
+        {{ animal.type }}
+      </div>
+    </div>
+  </div>
+</div>

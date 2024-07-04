@@ -1,0 +1,20 @@
+<table class="table table-striped align-middle">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Type</th>
+    <th scope="col" class="text-end">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let animal of animals$ | async; let i = index">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ animal.name }}</td>
+    <td>{{ animal.type }}</td>
+    <td class="text-end">
+      <button type="button" class="btn btn-danger btn-sm" (click)="removeAnimal(animal)">Remove</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
